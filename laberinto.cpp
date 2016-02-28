@@ -18,8 +18,8 @@ void imprimirMatriz(int tam){
 
 void floodfill(int r,int c, int tam){
     if(r < 0 || r >= tam + 1 || c < 0 || c >= tam + 1) return;
-    if(matriz[r][c] != '.') return;  // se encarga pintarme los nodos alcanzables desde la raiz;
-    matriz[r][c] = 'v';              //sacado del libro pag  125
+    if(matriz[r][c] != '.') return;  // Metodo para saber cuales son 
+    matriz[r][c] = 'v';              //
     for(int d = 0; d < 4;d++){
         floodfill(r + dr[d], c + dc[d],tam);
     }
@@ -70,7 +70,7 @@ int main () {
 
     getline(cin, entrada);
 
-    for (int m = 0; m < tam; m++) {
+    for (int m = 0; m < tam; m++) { //Estos for son para leer los caracteres del laberinto
 
         getline(cin, entrada);
 
